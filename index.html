@@ -8,13 +8,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script language="javascript" type="text/javascript">
     
-var script = $("<script />", {
-    src: "https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json",
-    type: "application/json"
-  }
-);
+function logResults(json){
+  console.log(json);
+}
 
-$("head").append(script);
+$.ajax({
+  url: "https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json",
+  dataType: "jsonp",
+  jsonpCallback: "logResults"
+});
   </script>
 </body>
 </html>
