@@ -7,8 +7,26 @@
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script language="javascript" type="text/javascript">
+    
+    function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+        xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined") {
+        xhr = new XDomainRequest();
+        xhr.open(method, url);
+    } else {
+        xhr = null;
+    }
+    return xhr;
+}
   var xhr = createCORSRequest('GET', 'https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json');
-
+if (!xhr) {
+    throw new Error('CORS not supported');
+}
+xhr.onload = function(){};
+xhr.onerror = function(){};
+xhr.send();
   </script>
 </body>
 </html>
