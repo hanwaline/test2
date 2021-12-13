@@ -7,14 +7,8 @@
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script language="javascript" type="text/javascript">
+  createCORSRequest('GET', 'https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json');
 
-    for(let i = 1; i < 4; i++){
-      url = `https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json`;
-
-      $.getJSON(url, (data) => {
-        document.write(`id=${data.id}, name=${data.name}, email=${data.email}`);
-      });
-    }
   </script>
 </body>
 </html>
