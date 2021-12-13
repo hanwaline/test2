@@ -7,16 +7,13 @@
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script language="javascript" type="text/javascript">
-    
-function logResults(json){
-  console.log(json);
-}
-
-$.ajax({
-  url: "https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json",
-  dataType: "jsonp",
-  jsonpCallback: "logResults"
-});
+    $(function() {
+    $.getJSON('https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json?callback=?',
+      {
+        zipcode: $('#zip').val()
+      }
+    )
+    }
   </script>
 </body>
 </html>
