@@ -12,7 +12,7 @@
       url = `test${i}.json`;
 
       $.getJSON(url, (data) => {
-        console.log(`id=${data.id}, name=${data.name}, email=${data.email}`);
+        alert(`id=${data.id}, name=${data.name}, email=${data.email}`);
       });
     }
   </script>
