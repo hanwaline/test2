@@ -1,19 +1,14 @@
-﻿<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>sample</title>
+<meta charset='utf-8'>
+<title>HTML内でのPHP処理</title>
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script language="javascript" type="text/javascript">
-    $(function() {
-    $.getJSON('https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json?callback=?',
-      {
-        zipcode: $('#zip').val()
-      }
-    )
-    });
-  </script>
+<h1><?php echo 'タイトルです'; ?></h1>
+<?php
+$text = "HTML内でのPHPスクリプト実行処理";
+echo "<p> $text </p>";
+?>
 </body>
 </html>
