@@ -7,9 +7,9 @@
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script language="javascript" type="text/javascript">
-    const url = "https://jsonplaceholder.typicode.com/users";
+    const url = "test1.json";
 
-    $.getJSON(test1.json, (data) => {
+    $.getJSON(url.json, (data) => {
       for (let i=0; i<data.length; i++){
         console.log(`userid=${data[i].id}, username=${data[i].name}`);
       }
