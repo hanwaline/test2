@@ -9,7 +9,7 @@
   <script language="javascript" type="text/javascript">
     const url = "test1.json";
 
-    $.getJSON(url.json, (data) => {
+    $.getJSON(url, (data) => {
       for (let i=0; i<data.length; i++){
         console.log(`userid=${data[i].id}, username=${data[i].name}`);
       }
