@@ -12,8 +12,10 @@
 	const url = "2022.01/2022.01.json";
 	
 	$.getJSON(url, (data) => {
-		for (let i=0; i < 2; i++){
-			console.log('userid=${data[i].id}, username=${data[i].0101}' );
+		for (let i = 0; i < 2; i++){
+			var id = ${data[i].id;
+			var 01 = ${data[i].0101;
+			console.log("id = %s, 0101 = %s", id, 01);
 		}
  	});
 </script>
