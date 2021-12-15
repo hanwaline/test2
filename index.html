@@ -13,9 +13,7 @@
 	
 	$.getJSON(url, (data) => {
 		for (let i = 0; i < 2; i++){
-			var id = $data[i].id;
-			var a = $data[i].a;
-			console.log("id = %s, 0101 = %s", id, a);
+			console.log(`userid=${data[i].id}, username=${data[i].a}`);
 		}
  	});
 </script>
