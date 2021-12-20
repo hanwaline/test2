@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>運用データ 2022/01</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+<script language="javascript" type="text/javascript">
+	const url = "2022.01/2022.01.json";
+	
+	$.getJSON(url, function(json)) {
+	
+	for (let i = 0; i < 11; i++){
+		console.log("id = " + json.data[i].id + ", 1 = " + json.data[i].I );
+	}
+});
+</script>
+<small>(C) 2021 bafukan</small>
+</body>
+</html>
