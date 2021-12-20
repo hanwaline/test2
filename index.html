@@ -14,7 +14,7 @@
 	$.getJSON(url, function(json) {
 	
 		for (let i = 0; i < 11; i++){
-			console.log("id = " + json.data[i].id + ", 1 = " + json.data[i].I );
+			console.log("id = " + json.data[i][0] + ", 1 = " + json.data[i][1] );
 		}
 	
 	});
